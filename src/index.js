@@ -1,8 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+
+import './styles/index.css';
 import * as serviceWorker from './serviceWorker';
+
+const App = () => {
+  return (
+    <div className="App">
+      <header className="App-header">
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+      </header>
+    </div>
+  );
+};
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
