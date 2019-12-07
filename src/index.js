@@ -3,14 +3,28 @@ import ReactDOM from 'react-dom';
 
 import './styles/index.css';
 import * as serviceWorker from './serviceWorker';
+import BookContextProvider from './context/BookContext';
+import Navbar from './components/Navbar';
+import BookList from './components/BookList';
+
+/**
+|--------------------------------------------------
+| 1. Create BookContext.js 
+| 2. Create Navbar.js 
+| 3. Create Booklist.js 
+| 4. Create BookDetails.js
+|--------------------------------------------------
+*/
 
 const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
+      <header className="container">
+        <h1>React Context & Hooks Example</h1>
+        <BookContextProvider>
+          <Navbar />
+          <BookList />
+        </BookContextProvider>
       </header>
     </div>
   );
