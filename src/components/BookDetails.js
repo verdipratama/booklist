@@ -6,6 +6,7 @@ const BookDetails = ({ book }) => {
 
   return (
     <li onClick={() => removeBook(book.id)}>
+      <div className="grid-title">Books</div>
       <div className="title">{book.title}</div>
       <div className="author">{book.author}</div>
     </li>

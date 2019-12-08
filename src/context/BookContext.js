@@ -8,7 +8,8 @@ const BookContextProvider = props => {
   const [books, setBooks] = useState([
     { id: 1, title: 'Name of The Wind', author: 'Patrick Rothfuss' },
     { id: 2, title: 'The Final Empire', author: 'Brandon Sanderson' },
-    { id: 3, title: 'Zero to Experts', author: 'Verdi Pratama' }
+    { id: 3, title: 'Zero to Experts', author: 'Verdi Pratama' },
+    { id: 4, title: 'Zero to Experts', author: 'Verdi Pratama' }
   ]);
 
   const addBook = (title, author) => {
