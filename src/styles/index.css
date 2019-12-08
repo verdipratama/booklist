@@ -32,6 +32,11 @@ h2 {
   color: white;
 }
 
+form input {
+  color: white;
+  margin-top: 20px;
+}
+
 .App {
   text-align: center;
 }
@@ -84,10 +89,12 @@ h2 {
 .book-list {
   margin: 20px;
 }
+
 .book-list ul {
   padding: 0;
   list-style-type: none;
 }
+
 .book-list li {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
   background: black;

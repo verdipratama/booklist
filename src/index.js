@@ -14,6 +14,7 @@ import BookList from './components/BookList';
 | 2. Create Navbar.js 
 | 3. Create Booklist.js 
 | 4. Create BookDetails.js
+| 5. Create AddBook.js
 |--------------------------------------------------
 */
 
@@ -21,7 +22,7 @@ const App = () => {
   return (
     <div className="App">
       <header className="container">
-        <h1>React Context & Hooks Example</h1>
+        {/* <h1>React Context & Hooks Example</h1> */}
         <BookContextProvider>
           <Navbar />
           <BookList />
