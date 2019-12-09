@@ -1,11 +1,12 @@
 import React, { useContext } from 'react';
-import { BookContext } from '../context/BookContext';
+import Context from '../providers/Context';
 
 const BookDetails = ({ book }) => {
-  const { removeBook } = useContext(BookContext);
+  // @ts-ignore
+  const { dispatch } = useContext(Context);
 
   return (
-    <li onClick={() => removeBook(book.id)}>
+    <li onClick={() => dispatch({ type: 'REMOVE_BOOK', id: book.id })}>
       <div className="grid-title">Books</div>
       <div className="title">{book.title}</div>
       <div className="author">{book.author}</div>

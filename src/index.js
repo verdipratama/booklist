@@ -4,17 +4,20 @@ import ReactDOM from 'react-dom';
 import './styles/index.css';
 import * as serviceWorker from './serviceWorker';
 
-import BookContextProvider from './context/BookContext';
+import BookProvider from './providers/BookProvider';
 import Navbar from './components/Navbar';
 import BookList from './components/BookList';
 
 /**
 |--------------------------------------------------
-| 1. Create BookContext.js 
-| 2. Create Navbar.js 
-| 3. Create Booklist.js 
-| 4. Create BookDetails.js
-| 5. Create AddBook.js
+| 1. Create Navbar.js 
+| 2. Create Booklist.js 
+| 3. Create BookDetails.js
+| 4. Create AddBook.js
+| 5. Create Context.js
+| 6. Create BookReducer.js
+| 7. Create BookProvider.js
+| 8. Adding LocalStorage
 |--------------------------------------------------
 */
 
@@ -23,10 +26,10 @@ const App = () => {
     <div className="App">
       <header className="container">
         {/* <h1>React Context & Hooks Example</h1> */}
-        <BookContextProvider>
+        <BookProvider>
           <Navbar />
           <BookList />
-        </BookContextProvider>
+        </BookProvider>
       </header>
     </div>
   );

@@ -1,9 +1,9 @@
 import React, { useContext, useState } from 'react';
-import { BookContext } from '../context/BookContext';
+import Context from '../providers/Context';
 
 const AddBook = () => {
-  // Ingat { destruction } dari BookContext
-  const { addBook } = useContext(BookContext);
+  // @ts-ignore
+  const { dispatch } = useContext(Context);
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
 
@@ -12,7 +12,14 @@ const AddBook = () => {
       onSubmit={e => {
         e.preventDefault();
         console.log(title, author);
-        addBook(title, author);
+
+        dispatch({
+          type: 'ADD_BOOK',
+          book: {
+            title: title,
+            author: author
+          }
+        });
 
         setTitle('');
         setAuthor('');
